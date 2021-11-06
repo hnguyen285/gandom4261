@@ -1,0 +1,6 @@
+framework module Pods_gandom4261 {
+  umbrella header "Pods-gandom4261-umbrella.h"
+
+  export *
+  module * { export * }
+}

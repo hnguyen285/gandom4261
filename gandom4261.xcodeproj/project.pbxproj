@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8637240A945F757ADD400BFE /* Pods_gandom4261.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587616A5933DB59AAF7127E7 /* Pods_gandom4261.framework */; };
 		DA61CB312736BF7100ABC506 /* gandom4261App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB302736BF7100ABC506 /* gandom4261App.swift */; };
 		DA61CB332736BF7100ABC506 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB322736BF7100ABC506 /* ContentView.swift */; };
 		DA61CB352736BF7200ABC506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA61CB342736BF7200ABC506 /* Assets.xcassets */; };
 		DA61CB382736BF7200ABC506 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA61CB372736BF7200ABC506 /* Preview Assets.xcassets */; };
+		DA61CB3F2736E2BE00ABC506 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA61CB3E2736E2BE00ABC506 /* GoogleService-Info.plist */; };
+		DA61CB412736E95A00ABC506 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB402736E95A00ABC506 /* SigninViewModel.swift */; };
+		DA61CB442736ED6500ABC506 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB432736ED6500ABC506 /* SignInView.swift */; };
+		DA61CB462736F3A700ABC506 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB452736F3A700ABC506 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D9F7D7218E1CAD2A3FB5C26 /* Pods-gandom4261.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gandom4261.release.xcconfig"; path = "Target Support Files/Pods-gandom4261/Pods-gandom4261.release.xcconfig"; sourceTree = "<group>"; };
+		587616A5933DB59AAF7127E7 /* Pods_gandom4261.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gandom4261.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61CB2D2736BF7100ABC506 /* gandom4261.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gandom4261.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61CB302736BF7100ABC506 /* gandom4261App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gandom4261App.swift; sourceTree = "<group>"; };
 		DA61CB322736BF7100ABC506 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA61CB342736BF7200ABC506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA61CB372736BF7200ABC506 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA61CB3E2736E2BE00ABC506 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DA61CB402736E95A00ABC506 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		DA61CB432736ED6500ABC506 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DA61CB452736F3A700ABC506 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DFC10B3D61857FEDE220B221 /* Pods-gandom4261.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gandom4261.debug.xcconfig"; path = "Target Support Files/Pods-gandom4261/Pods-gandom4261.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8637240A945F757ADD400BFE /* Pods_gandom4261.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7684119A32E8CC26E7DE2ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFC10B3D61857FEDE220B221 /* Pods-gandom4261.debug.xcconfig */,
+				0D9F7D7218E1CAD2A3FB5C26 /* Pods-gandom4261.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D105630C7C2FE78037A2CD8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				587616A5933DB59AAF7127E7 /* Pods_gandom4261.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA61CB242736BF7100ABC506 = {
 			isa = PBXGroup;
 			children = (
 				DA61CB2F2736BF7100ABC506 /* gandom4261 */,
 				DA61CB2E2736BF7100ABC506 /* Products */,
+				C7684119A32E8CC26E7DE2ED /* Pods */,
+				D105630C7C2FE78037A2CD8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,7 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				DA61CB302736BF7100ABC506 /* gandom4261App.swift */,
-				DA61CB322736BF7100ABC506 /* ContentView.swift */,
+				DA61CB422736ED2C00ABC506 /* views */,
+				DA61CB402736E95A00ABC506 /* SigninViewModel.swift */,
+				DA61CB3E2736E2BE00ABC506 /* GoogleService-Info.plist */,
 				DA61CB342736BF7200ABC506 /* Assets.xcassets */,
 				DA61CB362736BF7200ABC506 /* Preview Content */,
 			);
@@ -67,6 +101,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DA61CB422736ED2C00ABC506 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				DA61CB322736BF7100ABC506 /* ContentView.swift */,
+				DA61CB432736ED6500ABC506 /* SignInView.swift */,
+				DA61CB452736F3A700ABC506 /* SignUpView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA61CB3B2736BF7200ABC506 /* Build configuration list for PBXNativeTarget "gandom4261" */;
 			buildPhases = (
+				EF3E3305A1FE3AB16A0312CF /* [CP] Check Pods Manifest.lock */,
 				DA61CB292736BF7100ABC506 /* Sources */,
 				DA61CB2A2736BF7100ABC506 /* Frameworks */,
 				DA61CB2B2736BF7100ABC506 /* Resources */,
+				0C1187EA6F3EB817E93FC86E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +173,53 @@
 			files = (
 				DA61CB382736BF7200ABC506 /* Preview Assets.xcassets in Resources */,
 				DA61CB352736BF7200ABC506 /* Assets.xcassets in Resources */,
+				DA61CB3F2736E2BE00ABC506 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C1187EA6F3EB817E93FC86E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gandom4261/Pods-gandom4261-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gandom4261/Pods-gandom4261-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gandom4261/Pods-gandom4261-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF3E3305A1FE3AB16A0312CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gandom4261-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA61CB292736BF7100ABC506 /* Sources */ = {
@@ -138,7 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA61CB332736BF7100ABC506 /* ContentView.swift in Sources */,
+				DA61CB462736F3A700ABC506 /* SignUpView.swift in Sources */,
 				DA61CB312736BF7100ABC506 /* gandom4261App.swift in Sources */,
+				DA61CB442736ED6500ABC506 /* SignInView.swift in Sources */,
+				DA61CB412736E95A00ABC506 /* SigninViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +355,7 @@
 		};
 		DA61CB3C2736BF7200ABC506 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC10B3D61857FEDE220B221 /* Pods-gandom4261.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +385,7 @@
 		};
 		DA61CB3D2736BF7200ABC506 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9F7D7218E1CAD2A3FB5C26 /* Pods-gandom4261.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
