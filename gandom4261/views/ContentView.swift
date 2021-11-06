@@ -21,11 +21,14 @@ struct ContentView: View {
                    viewModel.signOut()
                 } label: {
                    Text("sign out")
-             }
+                
+                }
+                SearchLocationView()
              }
              
 
           }else {
+             //SearchLocationView()
              SignInView()
           }
           
