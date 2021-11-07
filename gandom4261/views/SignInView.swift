@@ -34,7 +34,7 @@ struct SignInView: View {
             
             HStack {
                Button {
-                   viewModel.signIn(email: "phodbgmail.com", password: "123123")
+                   viewModel.signIn(email: "phodb@gmail.com", password: "123123")
                } label: {
                   ZStack {
                      RoundedRectangle(cornerRadius: 15)
