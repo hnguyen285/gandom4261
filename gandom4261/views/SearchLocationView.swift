@@ -11,55 +11,75 @@ import SwiftUI
 
 struct SearchLocationView: View {
 
-  
-    @State private var search: String = ""
-    @State private var result: [PlaceInfo] = []
-    @State private var placeName: String = ""
-    @State private var placeAddress: String = ""
+    @EnvironmentObject var viewModel: SigninViewModel
     
-    private func getNearByLandmarks() {
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = search
-        
-        let search = MKLocalSearch(request: request)
-        search.start { (response, error) in
-            if let response = response {
-                let mapItems = response.mapItems
-                //+print(mapItems)
-                self.result = mapItems.map {
-                    PlaceInfo(placemark: $0.placemark)
-                }
-                print(result)
-                let place = self.result.randomElement()
-                placeName = place!.name
-                placeAddress = place!.address
-                print(place?.name as Any)
-                
-            }
-            
-        }
-        //print(self.result.randomElement())
-    }
-
+    
     var body: some View {
-        ZStack(alignment: .top) {
-            
-            //MapView(landmarks: landmarks)
-            
-            TextField("Search", text: $search, onEditingChanged:  { _ in })
-            {
-                // commit
-                self.getNearByLandmarks()
-            }.textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-                .offset(y: 44)
-            
-            VStack {
-                Text(placeName)
-                Text(placeAddress)
+        
+        ScrollView {
+            VStack() {
+                CategoryView(content: "Restaurant")
+                CategoryView(content: "Picnic")
+                CategoryView(content: "Tourist")
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.red)
+                        .frame(width: 300, height: 100)
+                    Text("Last minute get away!")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 100)
+                }
+                
+                    
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .navigationTitle("Pick a place:")
+            .toolbar {
+                Button {
+                    viewModel.signOut()
+                } label: {
+                    Text("Sign Out")
+                    
+                }
+            }
+        }
+        
+        
+        
+    }
+}
+
+struct CategoryView: View {
+    
+    var content: String
+ 
+    var body: some View {
+        NavigationLink {
+            SuggestionView(content: content)
+        } label: {
+            VStack{
+                ZStack {
+                    Image(content)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 300, height: 100)
+                        .mask {
+                            
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(width: 300, height: 100)
+                            
+                        }
+                    LinearGradient(gradient: Gradient(colors: [.black, .white]), startPoint: .leading, endPoint: .trailing)
+                        .opacity(0.4)
+                        .cornerRadius(10)
+                    Text(content)
+                        .frame(width: 280, height: 100, alignment: .leading)
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                }.frame(width: 300, height: 100)
                 
             }
         }
     }
 }
-

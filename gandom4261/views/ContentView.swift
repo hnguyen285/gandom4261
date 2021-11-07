@@ -16,18 +16,13 @@ struct ContentView: View {
              //MARK: - MAIN SCREEN GOES HERE
              
              VStack {
-                Text("main screen")
-                Button {
-                   viewModel.signOut()
-                } label: {
-                   Text("sign out")
+
                 
-                }
                 SearchLocationView()
              }
              
 
-          }else {
+          } else {
              //SearchLocationView()
              SignInView()
           }
@@ -35,6 +30,7 @@ struct ContentView: View {
        }.onAppear {
           viewModel.signedIn = viewModel.isSignedIn
        }
+       
     }
 }
 

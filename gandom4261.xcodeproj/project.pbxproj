@@ -18,6 +18,7 @@
 		DA61CB412736E95A00ABC506 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB402736E95A00ABC506 /* SigninViewModel.swift */; };
 		DA61CB442736ED6500ABC506 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB432736ED6500ABC506 /* SignInView.swift */; };
 		DA61CB462736F3A700ABC506 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB452736F3A700ABC506 /* SignUpView.swift */; };
+		DAB9B1FE2737E54C00280CF4 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DA61CB402736E95A00ABC506 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
 		DA61CB432736ED6500ABC506 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DA61CB452736F3A700ABC506 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
 		DFC10B3D61857FEDE220B221 /* Pods-gandom4261.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gandom4261.debug.xcconfig"; path = "Target Support Files/Pods-gandom4261/Pods-gandom4261.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				DA61CB432736ED6500ABC506 /* SignInView.swift */,
 				DA61CB452736F3A700ABC506 /* SignUpView.swift */,
 				7B81DC362736FC9A0080F0EA /* SearchLocationView.swift */,
+				DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				7B81DC3A273704A40080F0EA /* PlaceInfo.swift in Sources */,
 				DA61CB332736BF7100ABC506 /* ContentView.swift in Sources */,
+				DAB9B1FE2737E54C00280CF4 /* SuggestionView.swift in Sources */,
 				7B81DC372736FC9A0080F0EA /* SearchLocationView.swift in Sources */,
 				DA61CB462736F3A700ABC506 /* SignUpView.swift in Sources */,
 				DA61CB312736BF7100ABC506 /* gandom4261App.swift in Sources */,
