@@ -20,11 +20,11 @@ struct PlaceInfo {
     
     func getAddress(placemarks: MKPlacemark) -> String {
         
-        let outputString = [placemark.locality,
-                            placemark.subLocality,
+        let outputString = [placemark.subThoroughfare,
                             placemark.thoroughfare,
+                            placemark.locality,
+                            placemark.subLocality,
                             placemark.postalCode,
-                            placemark.subThoroughfare,
                             placemark.country].compactMap{$0}.joined(separator: ", ")
         print(outputString)
         return outputString
