@@ -6,6 +6,11 @@ target 'gandom4261' do
   use_frameworks!
 
   # Pods for gandom4261
-pod 'Firebase/Core'
+
 pod 'Firebase/Auth'
+pod 'Firebase/Analytics'
+pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
+pod 'Firebase/Storage'
+pod 'GoogleSignIn'
 end

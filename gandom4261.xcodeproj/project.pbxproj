@@ -54,6 +54,7 @@
 		7B81DC38273704860080F0EA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DA61CB402736E95A00ABC506 /* SigninViewModel.swift */,
 				7B81DC39273704A40080F0EA /* PlaceInfo.swift */,
 			);
 			path = ViewModels;
@@ -99,7 +100,6 @@
 			children = (
 				DA61CB302736BF7100ABC506 /* gandom4261App.swift */,
 				DA61CB422736ED2C00ABC506 /* views */,
-				DA61CB402736E95A00ABC506 /* SigninViewModel.swift */,
 				DA61CB3E2736E2BE00ABC506 /* GoogleService-Info.plist */,
 				DA61CB342736BF7200ABC506 /* Assets.xcassets */,
 				DA61CB362736BF7200ABC506 /* Preview Content */,
