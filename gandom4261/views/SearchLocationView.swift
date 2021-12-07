@@ -34,7 +34,8 @@ struct SearchLocationView: View {
                     
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .navigationTitle("Pick a place:")
+            .navigationTitle("Pick a catagory")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button {
                     viewModel.signOut()

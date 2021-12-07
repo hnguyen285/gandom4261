@@ -58,6 +58,7 @@ struct SignUpView: View {
          .padding()
          Spacer()
       }.navigationTitle("Create Account")
+         .navigationBarTitleDisplayMode(.inline)
          .background(.gray)
    }
    
