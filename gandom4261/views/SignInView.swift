@@ -31,43 +31,45 @@ struct SignInView: View {
                .padding()
                .background(Color(.secondarySystemBackground))
                .cornerRadius(15)
-            
-            HStack {
-               Button {
-                   viewModel.signIn(email: "phodb@gmail.com", password: "123123")
-               } label: {
-                  ZStack {
-                     RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.black)
-                        .frame(width: 160, height: 50, alignment: .center)
-                     
-                     Text("Use as a Guest")
+            Group {
+               HStack {
+                  Button {
+                     viewModel.signIn(email: "phodb@gmail.com", password: "123123")
+                  } label: {
+                     ZStack {
+                        RoundedRectangle(cornerRadius: 15)
+                           .stroke(Color.green)
+                           .frame(width: 160, height: 50, alignment: .center)
+                        
+                        Text("Use as a Guest")
+                           .font(.title2)
+                           .foregroundColor(Color.green)
+                           .frame(width: 160, height: 50)
+                        
+                           .cornerRadius(15)
+                     }
+                  }
+                  
+                  Button {
+                     guard !email.isEmpty, !password.isEmpty else {
+                        return
+                     }
+                     viewModel.signIn(email: email, password: password)
+                  } label: {
+                     Text("Sign In")
                         .font(.title2)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                         .frame(width: 160, height: 50)
-                     
+                        .background(Color.green)
                         .cornerRadius(15)
                   }
-               }
+                  
+               }.padding()
+               NavigationLink("Create Account", destination: SignUpView())
+                  .font(.title2)
+                  .foregroundColor(Color.green)
                
-               Button {
-                  guard !email.isEmpty, !password.isEmpty else {
-                     return
-                  }
-                  viewModel.signIn(email: email, password: password)
-               } label: {
-                  Text("Sign In")
-                     .font(.title2)
-                     .foregroundColor(Color.white)
-                     .frame(width: 160, height: 50)
-                     .background(Color.green)
-                     .cornerRadius(15)
-               }
-               
-            }.padding()
-            
-            NavigationLink("Create Account", destination: SignUpView())
-               .font(.title2)
+            }
             
          }
          .padding()

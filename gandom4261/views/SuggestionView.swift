@@ -24,15 +24,15 @@ struct SuggestionView: View {
       search.start { (response, error) in
          if let response = response {
             let mapItems = response.mapItems
-//            +print(mapItems)
+            //            +print(mapItems)
             self.result = mapItems.map {
                PlaceInfo(placemark: $0.placemark)
             }
-//            print(result)
+            //            print(result)
             let place = self.result.randomElement()
             placeName = place!.name
             placeAddress = place!.address
-//            print(place?.name as Any)
+            //            print(place?.name as Any)
             
          }
          
@@ -59,16 +59,18 @@ struct SuggestionView: View {
          } label: {
             ZStack {
                RoundedRectangle(cornerRadius: 15)
-                  .stroke(Color.black)
+                  .stroke(Color.green)
                   .frame(width: 160, height: 50, alignment: .center)
                
                Text("Shuffle")
                   .font(.title2)
-                  .foregroundColor(Color.black)
+                  .foregroundColor(Color.green)
                   .frame(width: 160, height: 50)
                
                   .cornerRadius(15)
-            }            }
+            }
+            
+         }
          
       }
       

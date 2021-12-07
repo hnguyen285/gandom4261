@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B81DC372736FC9A0080F0EA /* SearchLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81DC362736FC9A0080F0EA /* SearchLocationView.swift */; };
+		7B81DC372736FC9A0080F0EA /* CategorySubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81DC362736FC9A0080F0EA /* CategorySubView.swift */; };
 		7B81DC3A273704A40080F0EA /* PlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81DC39273704A40080F0EA /* PlaceInfo.swift */; };
 		8637240A945F757ADD400BFE /* Pods_gandom4261.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587616A5933DB59AAF7127E7 /* Pods_gandom4261.framework */; };
 		DA61CB312736BF7100ABC506 /* gandom4261App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB302736BF7100ABC506 /* gandom4261App.swift */; };
@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		0D9F7D7218E1CAD2A3FB5C26 /* Pods-gandom4261.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gandom4261.release.xcconfig"; path = "Target Support Files/Pods-gandom4261/Pods-gandom4261.release.xcconfig"; sourceTree = "<group>"; };
 		587616A5933DB59AAF7127E7 /* Pods_gandom4261.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gandom4261.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B81DC362736FC9A0080F0EA /* SearchLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationView.swift; sourceTree = "<group>"; };
+		7B81DC362736FC9A0080F0EA /* CategorySubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySubView.swift; sourceTree = "<group>"; };
 		7B81DC39273704A40080F0EA /* PlaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfo.swift; sourceTree = "<group>"; };
 		DA61CB2D2736BF7100ABC506 /* gandom4261.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gandom4261.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61CB302736BF7100ABC506 /* gandom4261App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gandom4261App.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				DA61CB322736BF7100ABC506 /* ContentView.swift */,
 				DA61CB432736ED6500ABC506 /* SignInView.swift */,
 				DA61CB452736F3A700ABC506 /* SignUpView.swift */,
-				7B81DC362736FC9A0080F0EA /* SearchLocationView.swift */,
+				7B81DC362736FC9A0080F0EA /* CategorySubView.swift */,
 				DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */,
 			);
 			path = views;
@@ -246,7 +246,7 @@
 				7B81DC3A273704A40080F0EA /* PlaceInfo.swift in Sources */,
 				DA61CB332736BF7100ABC506 /* ContentView.swift in Sources */,
 				DAB9B1FE2737E54C00280CF4 /* SuggestionView.swift in Sources */,
-				7B81DC372736FC9A0080F0EA /* SearchLocationView.swift in Sources */,
+				7B81DC372736FC9A0080F0EA /* CategorySubView.swift in Sources */,
 				DA61CB462736F3A700ABC506 /* SignUpView.swift in Sources */,
 				DA61CB312736BF7100ABC506 /* gandom4261App.swift in Sources */,
 				DA61CB442736ED6500ABC506 /* SignInView.swift in Sources */,
