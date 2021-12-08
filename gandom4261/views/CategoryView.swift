@@ -14,7 +14,7 @@ struct CategoryView: View {
    
    var body: some View {
       
-      ScrollView {
+      ScrollView(showsIndicators: false) {
          Spacer()
          VStack() {
             CategorySubView(content: "Restaurant")
@@ -23,7 +23,6 @@ struct CategoryView: View {
             CategorySubView(content: "Tourist")
             
          }
-//         .frame(maxWidth: .infinity, maxHeight: .infinity)
          .navigationTitle("Pick a Category")
          .navigationBarTitleDisplayMode(.inline)
          .toolbar {

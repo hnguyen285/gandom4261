@@ -16,7 +16,8 @@ struct CategorySubView: View {
    
    var body: some View {
       NavigationLink {
-         SuggestionView(content: content)
+//         SuggestionView(content: content)
+         ConstraintView()
       } label: {
          VStack{
             ZStack {
