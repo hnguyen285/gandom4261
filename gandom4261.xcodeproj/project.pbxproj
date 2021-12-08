@@ -19,6 +19,7 @@
 		DA61CB442736ED6500ABC506 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB432736ED6500ABC506 /* SignInView.swift */; };
 		DA61CB462736F3A700ABC506 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB452736F3A700ABC506 /* SignUpView.swift */; };
 		DAB9B1FE2737E54C00280CF4 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */; };
+		DAD5555A2760378300B3F361 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD555592760378300B3F361 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DA61CB432736ED6500ABC506 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DA61CB452736F3A700ABC506 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
+		DAD555592760378300B3F361 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		DFC10B3D61857FEDE220B221 /* Pods-gandom4261.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gandom4261.debug.xcconfig"; path = "Target Support Files/Pods-gandom4261/Pods-gandom4261.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +59,8 @@
 				DA61CB402736E95A00ABC506 /* SigninViewModel.swift */,
 				7B81DC39273704A40080F0EA /* PlaceInfo.swift */,
 			);
-			path = ViewModels;
+			name = ViewModels;
+			path = views/ViewModels;
 			sourceTree = "<group>";
 		};
 		C7684119A32E8CC26E7DE2ED /* Pods */ = {
@@ -99,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				DA61CB302736BF7100ABC506 /* gandom4261App.swift */,
+				7B81DC38273704860080F0EA /* ViewModels */,
 				DA61CB422736ED2C00ABC506 /* views */,
 				DA61CB3E2736E2BE00ABC506 /* GoogleService-Info.plist */,
 				DA61CB342736BF7200ABC506 /* Assets.xcassets */,
@@ -118,12 +122,12 @@
 		DA61CB422736ED2C00ABC506 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				7B81DC38273704860080F0EA /* ViewModels */,
 				DA61CB322736BF7100ABC506 /* ContentView.swift */,
 				DA61CB432736ED6500ABC506 /* SignInView.swift */,
 				DA61CB452736F3A700ABC506 /* SignUpView.swift */,
-				7B81DC362736FC9A0080F0EA /* CategorySubView.swift */,
 				DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */,
+				DAD555592760378300B3F361 /* CategoryView.swift */,
+				7B81DC362736FC9A0080F0EA /* CategorySubView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -251,6 +255,7 @@
 				DA61CB312736BF7100ABC506 /* gandom4261App.swift in Sources */,
 				DA61CB442736ED6500ABC506 /* SignInView.swift in Sources */,
 				DA61CB412736E95A00ABC506 /* SigninViewModel.swift in Sources */,
+				DAD5555A2760378300B3F361 /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +389,6 @@
 				DEVELOPMENT_ASSET_PATHS = "\"gandom4261/Preview Content\"";
 				DEVELOPMENT_TEAM = FJP3PAJK8Q;
 				ENABLE_PREVIEWS = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -400,7 +404,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -415,7 +419,6 @@
 				DEVELOPMENT_ASSET_PATHS = "\"gandom4261/Preview Content\"";
 				DEVELOPMENT_TEAM = FJP3PAJK8Q;
 				ENABLE_PREVIEWS = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -432,7 +435,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

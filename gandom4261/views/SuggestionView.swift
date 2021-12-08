@@ -8,7 +8,11 @@
 import SwiftUI
 import MapKit
 struct SuggestionView: View {
+   
+   
    var content: String
+   
+   
    @State private var search: String = ""
    @State private var result: [PlaceInfo] = []
    @State private var placeName: String = ""
@@ -66,7 +70,6 @@ struct SuggestionView: View {
                   .font(.title2)
                   .foregroundColor(Color.green)
                   .frame(width: 160, height: 50)
-               
                   .cornerRadius(15)
             }
             
