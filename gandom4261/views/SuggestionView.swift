@@ -64,7 +64,7 @@ struct SuggestionView: View {
          }.font(.title)
             .frame(width: 300, height: 400)
             .onAppear {
-               search = content
+               chooseContent()
                getNearByLandmarks()
             }
          Button {
