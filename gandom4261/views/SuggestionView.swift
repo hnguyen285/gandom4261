@@ -9,8 +9,9 @@ import SwiftUI
 import MapKit
 struct SuggestionView: View {
    
-   
-   var content: String
+   var category: [String] = ["Restaurant", "Coffee Shop", "Picnic", "Tourist"]
+   @State var content: String
+   var isGetaway: Bool
    
    
    @State private var search: String = ""
@@ -43,6 +44,14 @@ struct SuggestionView: View {
       }
       //print(self.result.randomElement())
    }
+   
+   func chooseContent() {
+      if isGetaway == true {
+         self.content = category.randomElement() ?? "boba"
+         search = content
+      }
+   }
+   
    var body: some View {
       VStack {
          VStack(alignment: .leading) {
@@ -59,6 +68,7 @@ struct SuggestionView: View {
                getNearByLandmarks()
             }
          Button {
+            chooseContent()
             getNearByLandmarks()
          } label: {
             ZStack {

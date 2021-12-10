@@ -10,8 +10,9 @@ import SwiftUI
 struct CategoryView: View {
    
    @EnvironmentObject var viewModel: SigninViewModel
-   
+   @ObservedObject var categoryModel =  CategoryModel()
    var category: [String] = ["Restaurant", "Coffee Shop", "Picnic", "Tourist"]
+   @State var randomCategory: String = "boba shop"
    
    var body: some View {
       
@@ -37,7 +38,7 @@ struct CategoryView: View {
       }.frame(maxWidth: .infinity, maxHeight: 400)
       
       NavigationLink {
-         SuggestionView(content: getRandomCategory())
+         SuggestionView(content: categoryModel.randomCategory, isGetaway: true)
       } label: {
          ZStack {
             RoundedRectangle(cornerRadius: 10)
@@ -48,13 +49,15 @@ struct CategoryView: View {
                .foregroundColor(.white)
                .frame(width: 300, height: 100)
          }
+      }.onTapGesture {
+         getRandomCategory()
       }
       
       Spacer()
    }
    
-   func getRandomCategory() -> String {
-      return category.randomElement() ?? "boba shop"
+   func getRandomCategory() -> Void {
+      categoryModel.randomCategory = category.randomElement() ?? "boba"
    }
 }
 

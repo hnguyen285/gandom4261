@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RestaurantFilterView: View {
    
-   var category: String   
+   var category: String
    
    var distances = ["N/A", "05 miles", "10 miles", "15 miles", "30 miles"]
    @State private var selectedDistance = "N/A"
@@ -60,7 +60,7 @@ struct RestaurantFilterView: View {
             }.padding(40)
             
             NavigationLink {
-               SuggestionView(content: category)
+               SuggestionView(content: category, isGetaway: false)
             } label: {
                ZStack {
                   RoundedRectangle(cornerRadius: 15)
