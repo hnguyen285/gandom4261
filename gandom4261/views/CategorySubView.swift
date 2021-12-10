@@ -17,7 +17,7 @@ struct CategorySubView: View {
    var body: some View {
       NavigationLink {
 //         SuggestionView(content: content)
-         ConstraintView()
+         RestaurantFilterView(category: content)
       } label: {
          VStack{
             ZStack {

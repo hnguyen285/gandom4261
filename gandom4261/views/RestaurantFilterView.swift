@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RestaurantFilterView: View {
    
-   
+   var category: String   
    
    var distances = ["N/A", "05 miles", "10 miles", "15 miles", "30 miles"]
    @State private var selectedDistance = "N/A"
@@ -21,54 +21,70 @@ struct RestaurantFilterView: View {
    @State private var selectedType = "N/A"
    
    var body: some View {
-      NavigationView {
-         VStack {
+
+         VStack() {
             HStack(){
-               Spacer()
-               Text("In Distance ")
+               
+               Text("In Distance: ")
                Spacer()
                Picker("In Distance", selection: $selectedDistance) {
                   ForEach(distances, id: \.self) {
                      Text($0)
                   }
                }
-               Spacer()
-            }
+               
+            }.padding(40)
             
             HStack(){
-               Spacer()
-               Text("Price Level ")
+               
+               Text("Price Level: ")
                Spacer()
                Picker("Price Level", selection: $selectedPrice) {
                   ForEach(priceLevel, id: \.self) {
                      Text($0)
                   }
                }
-               Spacer()
-            }
+               
+            }.padding(40)
             
             HStack(){
+               
+               Text("Type:")
                Spacer()
-               Text("Type")
-               Spacer()
-               Picker("Price Level", selection: $selectedPrice) {
-                  ForEach(priceLevel, id: \.self) {
+               Picker("Type", selection: $selectedType) {
+                  ForEach(types, id: \.self) {
                      Text($0)
                   }
                }
-               Spacer()
+               
+            }.padding(40)
+            
+            NavigationLink {
+               SuggestionView(content: category)
+            } label: {
+               ZStack {
+                  RoundedRectangle(cornerRadius: 15)
+                     .stroke(Color.green)
+                     .frame(width: 160, height: 50, alignment: .center)
+                  
+                  Text("GO!")
+                     .font(.title2)
+                     .foregroundColor(Color.green)
+                     .frame(width: 160, height: 50)
+                     .cornerRadius(15)
+               }
             }
+
          }
          
-      }
       .navigationTitle("Filter")
-         .navigationBarTitleDisplayMode(.inline)
+      .navigationBarTitleDisplayMode(.inline)
       
    }
 }
 
 struct ConstraintView_Previews: PreviewProvider {
    static var previews: some View {
-      RestaurantFilterView()
+      RestaurantFilterView(category: "Restaurant")
    }
 }

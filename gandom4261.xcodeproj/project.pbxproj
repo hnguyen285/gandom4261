@@ -20,7 +20,7 @@
 		DA61CB462736F3A700ABC506 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB452736F3A700ABC506 /* SignUpView.swift */; };
 		DAB9B1FE2737E54C00280CF4 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */; };
 		DAD5555A2760378300B3F361 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD555592760378300B3F361 /* CategoryView.swift */; };
-		DAD5555D27603BA900B3F361 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5555C27603BA900B3F361 /* ConstraintView.swift */; };
+		DAD5555D27603BA900B3F361 /* RestaurantFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5555C27603BA900B3F361 /* RestaurantFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		DA61CB452736F3A700ABC506 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
 		DAD555592760378300B3F361 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		DAD5555C27603BA900B3F361 /* ConstraintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintView.swift; sourceTree = "<group>"; };
+		DAD5555C27603BA900B3F361 /* RestaurantFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFilterView.swift; sourceTree = "<group>"; };
 		DFC10B3D61857FEDE220B221 /* Pods-gandom4261.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gandom4261.debug.xcconfig"; path = "Target Support Files/Pods-gandom4261/Pods-gandom4261.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +130,7 @@
 				DAB9B1FD2737E54C00280CF4 /* SuggestionView.swift */,
 				DAD555592760378300B3F361 /* CategoryView.swift */,
 				7B81DC362736FC9A0080F0EA /* CategorySubView.swift */,
-				DAD5555C27603BA900B3F361 /* ConstraintView.swift */,
+				DAD5555C27603BA900B3F361 /* RestaurantFilterView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 				DAB9B1FE2737E54C00280CF4 /* SuggestionView.swift in Sources */,
 				7B81DC372736FC9A0080F0EA /* CategorySubView.swift in Sources */,
 				DA61CB462736F3A700ABC506 /* SignUpView.swift in Sources */,
-				DAD5555D27603BA900B3F361 /* ConstraintView.swift in Sources */,
+				DAD5555D27603BA900B3F361 /* RestaurantFilterView.swift in Sources */,
 				DA61CB312736BF7100ABC506 /* gandom4261App.swift in Sources */,
 				DA61CB442736ED6500ABC506 /* SignInView.swift in Sources */,
 				DA61CB412736E95A00ABC506 /* SigninViewModel.swift in Sources */,
