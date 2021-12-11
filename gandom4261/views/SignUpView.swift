@@ -26,6 +26,7 @@ struct SignUpView: View {
                .cornerRadius(15)
                .padding(.vertical)
             SecureField("Password", text: $password)
+               .foregroundColor(Color.black)
                .autocapitalization(.none)
                .disableAutocorrection(true)
                .padding()

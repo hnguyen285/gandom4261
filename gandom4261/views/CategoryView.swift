@@ -76,22 +76,7 @@ struct CategoryView: View {
       }
       
       Spacer()
-      Button {
-         getPlace()
-      } label: {
-         ZStack {
-            RoundedRectangle(cornerRadius: 15)
-               .stroke(Color.green)
-               .frame(width: 160, height: 50, alignment: .center)
-            
-            Text("Saved list")
-               .font(.title2)
-               .foregroundColor(Color.green)
-               .frame(width: 160, height: 50)
-               .cornerRadius(15)
-         }
-         
-      }
+     
       NavigationLink {
          SavedListView()
       } label: {

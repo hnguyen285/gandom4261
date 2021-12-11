@@ -118,7 +118,7 @@ struct SuggestionView: View {
    
    
    
-   func savePlace(category: String, name: String, phone: String, address: String, price: String, rating: Double ) -> Void {
+   func savePlace(category: String, name: String, phone: String, address: String, price: String, rating: Double, long: Double, lat: Double ) -> Void {
       guard let userID = Auth.auth().currentUser?.uid else { return }
       let db = Firestore.firestore()
       db.collection("gandom").document(name).setData([
@@ -128,8 +128,9 @@ struct SuggestionView: View {
           "address": address,
           "price": price,
           "rating": rating,
-          "user_id": userID
-          
+          "user_id": userID,
+         "longitude": long,
+         "latitude": lat
       ]) { err in
           if let err = err {
               print("Error writing document: \(err)")
@@ -161,7 +162,7 @@ struct SuggestionView: View {
          VStack(alignment: .leading) {
             Text("Category: \(content)")
                .fontWeight(.bold).font(.title)
-            Text(placeName).fontWeight(.bold)
+            Text(placeName).font(.title2).fontWeight(.bold)
             HStack {
                Text("Rating: ").fontWeight(.bold)
                Text(String(rating))
@@ -194,7 +195,7 @@ struct SuggestionView: View {
          
          
          Button {
-            savePlace(category: content,name: placeName, phone: phone, address: placeAddress, price: price, rating: rating)
+            savePlace(category: content,name: placeName, phone: phone, address: placeAddress, price: price, rating: rating, long: desLong, lat: desLat)
          } label: {
             ZStack {
                RoundedRectangle(cornerRadius: 15)

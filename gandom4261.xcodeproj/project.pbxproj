@@ -14,6 +14,7 @@
 		DA54903A27642A660086DCB7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54903927642A660086DCB7 /* LocationManager.swift */; };
 		DA54903C276450B00086DCB7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54903B276450B00086DCB7 /* Place.swift */; };
 		DA54903E27647FAE0086DCB7 /* SavedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54903D27647FAE0086DCB7 /* SavedListView.swift */; };
+		DA549040276492560086DCB7 /* DBdocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54903F276492560086DCB7 /* DBdocument.swift */; };
 		DA61CB312736BF7100ABC506 /* gandom4261App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB302736BF7100ABC506 /* gandom4261App.swift */; };
 		DA61CB332736BF7100ABC506 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61CB322736BF7100ABC506 /* ContentView.swift */; };
 		DA61CB352736BF7200ABC506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA61CB342736BF7200ABC506 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		DA54903927642A660086DCB7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DA54903B276450B00086DCB7 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		DA54903D27647FAE0086DCB7 /* SavedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListView.swift; sourceTree = "<group>"; };
+		DA54903F276492560086DCB7 /* DBdocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBdocument.swift; sourceTree = "<group>"; };
 		DA61CB2D2736BF7100ABC506 /* gandom4261.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gandom4261.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61CB302736BF7100ABC506 /* gandom4261App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gandom4261App.swift; sourceTree = "<group>"; };
 		DA61CB322736BF7100ABC506 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				DA54903927642A660086DCB7 /* LocationManager.swift */,
 				7B81DC39273704A40080F0EA /* PlaceInfo.swift */,
 				DA6441D027633AD400395F53 /* CategoryModel.swift */,
+				DA54903F276492560086DCB7 /* DBdocument.swift */,
 				DA1337342763CFE10006FBA9 /* yelpData.swift */,
 				DA54903B276450B00086DCB7 /* Place.swift */,
 			);
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA549040276492560086DCB7 /* DBdocument.swift in Sources */,
 				7B81DC3A273704A40080F0EA /* PlaceInfo.swift in Sources */,
 				DA61CB332736BF7100ABC506 /* ContentView.swift in Sources */,
 				DAB9B1FE2737E54C00280CF4 /* SuggestionView.swift in Sources */,
