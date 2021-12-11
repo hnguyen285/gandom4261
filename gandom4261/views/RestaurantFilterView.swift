@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct RestaurantFilterView: View {
    
    var category: String
@@ -14,7 +15,7 @@ struct RestaurantFilterView: View {
    var distances = ["N/A", "05 miles", "10 miles", "15 miles", "30 miles"]
    @State private var selectedDistance = "N/A"
    
-   var priceLevel = ["N/A", "05 miles", "10 miles", "15 miles", "30 miles"]
+   var priceLevel = ["N/A", "$", "$$", "$$$", "$$$$"]
    @State private var selectedPrice = "N/A"
    
    var types = ["N/A", "Noodle Soup", "BBQ", "Sushi Bar", "Fastfood"]
