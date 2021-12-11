@@ -7,12 +7,16 @@
 
 import SwiftUI
 import MapKit
+import FirebaseAuth
+import Firebase
 
 struct SuggestionView: View {
    
    var category: [String] = ["Restaurant", "Coffee Shop", "Picnic", "Tourist"]
    @State var content: String
    var isGetaway: Bool
+   
+   let auth = Auth.auth()
    
    @StateObject var locationManager = LocationManager()
    
@@ -25,17 +29,28 @@ struct SuggestionView: View {
    @State private var distance: Double = 0.0
    @State private var phone: String = ""
    @State private var descript: [String] = []
-   
+   @State private var user_id: String = ""
    @EnvironmentObject var viewModel: SigninViewModel
-   
+   var lat: String = "latitude=33.594100"
+   var long: String = "longtitude=-84.286650"
+   @State private var desLat: Double = 0.0
+   @State private var desLong: Double = 0.0
 
+   
+   
    
    func performRequest() {
       let headers = [
          "Accept": "application/json",
          "Authorization": "Bearer fptQQH-6MKQSd9IuZy8hHZk88BBNgzqbHR-0reJlLnTN6iAQFRewG2br8UvJ6n3h_qmAwGmtXuQCdtrDaoqHoxv-XcFcSTA8B4ycedGr1lb_NJF_J1tN1CgdU_qyYXYx"
       ]
-      let yelp_url = "https://api.yelp.com/v3/businesses/search?term=boba&location=Morrow"
+      
+
+      if content == "Coffee Shop" {
+         content = "Coffee"
+      }
+      let radius = 10000
+      let yelp_url = "https://api.yelp.com/v3/businesses/search?term=" + content + "&location=" + "Morrow&" + lat + "&" + long + "&radius=" + String(radius)
       let request = NSMutableURLRequest(url: NSURL(string: yelp_url)! as URL,
                                         cachePolicy: .useProtocolCachePolicy,
                                         timeoutInterval: 10.0)
@@ -60,7 +75,6 @@ struct SuggestionView: View {
       do {
          let decodedData = try decoder.decode(yelpData.self, from: data)
          let loc = decodedData.businesses.randomElement()
-//         print(loc)
          guard let validName = loc?.name else {
             return
          }
@@ -84,19 +98,48 @@ struct SuggestionView: View {
             return
          }
          self.rating = validRating
-////         print("@@@@@")
-////         print(locationManager)
-////         locationManager.requestLocation()
-//         if let location = locationManager.location {
-//             print(location)
-//             print(location.latitude)
-//             print(location.longitude)
-//         }
+
+         guard let validLat = loc?.coordinates.latitude else {
+            return
+         }
+         self.desLat = validLat
+         guard let validLong = loc?.coordinates.longitude else {
+            return
+         }
+         self.desLong = validLong
+         print(desLong)
+
       } catch {
          print(error)
       }
 
    }
+   
+   
+   
+   
+   func savePlace(category: String, name: String, phone: String, address: String, price: String, rating: Double ) -> Void {
+      guard let userID = Auth.auth().currentUser?.uid else { return }
+      let db = Firestore.firestore()
+      db.collection("gandom").document(name).setData([
+         "category": category,
+          "name": name,
+          "phone": phone,
+          "address": address,
+          "price": price,
+          "rating": rating,
+          "user_id": userID
+          
+      ]) { err in
+          if let err = err {
+              print("Error writing document: \(err)")
+          } else {
+              print("Document successfully written!")
+          }
+      }
+      
+   }
+
    
 
    
@@ -107,17 +150,39 @@ struct SuggestionView: View {
       }
    }
    
+   func openMap()->Void {
+      let url = "http://maps.apple.com/maps?daddr=\(desLat),\(desLong)"
+         UIApplication.shared.open(URL(string:url)!)
+      
+   }
+   
    var body: some View {
       VStack {
          VStack(alignment: .leading) {
             Text("Category: \(content)")
-               .fontWeight(.bold)
+               .fontWeight(.bold).font(.title)
+            Text(placeName).fontWeight(.bold)
+            HStack {
+               Text("Rating: ").fontWeight(.bold)
+               Text(String(rating))
+            }
+            HStack {
+               Text("Price Level: ").fontWeight(.bold)
+               Text(price)
+            }
+            HStack {
+               Text("Phone: ").fontWeight(.bold)
+               Text(phone)
+
+            }
+            HStack(alignment: .top) {
+               Text("Address: ").fontWeight(.bold)
+               Text(placeAddress).onTapGesture {
+                  openMap()
+               }
+               
+            }
             
-            Text(placeName)
-            Text(String(rating))
-            Text(price)
-            Text(phone)
-            Text(placeAddress).frame(width: 300, height: 150, alignment: .leading)
             
             Spacer()
          }
@@ -126,6 +191,24 @@ struct SuggestionView: View {
                chooseContent()
                performRequest()
             }
+         
+         
+         Button {
+            savePlace(category: content,name: placeName, phone: phone, address: placeAddress, price: price, rating: rating)
+         } label: {
+            ZStack {
+               RoundedRectangle(cornerRadius: 15)
+                  .stroke(Color.green)
+                  .frame(width: 160, height: 50, alignment: .center)
+               
+               Text("Save")
+                  .font(.title2)
+                  .foregroundColor(Color.green)
+                  .frame(width: 160, height: 50)
+                  .cornerRadius(15)
+            }
+            
+         }
          Button {
             chooseContent()
             performRequest()
@@ -143,6 +226,7 @@ struct SuggestionView: View {
             }
             
          }
+         
          
       }
       

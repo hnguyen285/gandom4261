@@ -22,9 +22,14 @@ struct Business: Decodable {
    let display_phone: String?
    let location: Location?
    var distance: Double?
+   var coordinates: Coordinates
    
 }
 
+struct Coordinates: Decodable {
+   let latitude: Double
+   let longitude: Double
+}
 struct Location: Decodable {
    let address1: String?
    let city: String?

@@ -68,7 +68,7 @@ struct RestaurantFilterView: View {
                      .stroke(Color.green)
                      .frame(width: 160, height: 50, alignment: .center)
                   
-                  Text("GO!")
+                  Text("Confirm")
                      .font(.title2)
                      .foregroundColor(Color.green)
                      .frame(width: 160, height: 50)
