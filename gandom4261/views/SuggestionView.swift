@@ -44,7 +44,14 @@ struct SuggestionView: View {
    func performRequest() {
       var find = content
       var radius = 10000
-      var price = ""
+      print("$$$$$$")
+      print(filterRadius)
+      print(filterType)
+      print(filterPriceLevel)
+      print(find)
+      print(radius)
+      print("$$$$$$")
+//      var price = ""
       if isGetaway != true && content == "Restaurant" {
          switch filterRadius {
             case "05 miles":
@@ -56,7 +63,7 @@ struct SuggestionView: View {
             case "30 miles":
                radius = 48280
             default:
-               radius = 60000
+               radius = 40000
          }
          switch filterType {
             case "Noodle Soup":
@@ -70,11 +77,14 @@ struct SuggestionView: View {
             default:
                find = "Restaurant"
          }
-         
+         print(find)
+         print(radius)
       }
       if content == "Coffee Shop" {
          find = "Coffee"
       }
+      print(find)
+      print(radius)
       let headers = [
          "Accept": "application/json",
          "Authorization": "Bearer fptQQH-6MKQSd9IuZy8hHZk88BBNgzqbHR-0reJlLnTN6iAQFRewG2br8UvJ6n3h_qmAwGmtXuQCdtrDaoqHoxv-XcFcSTA8B4ycedGr1lb_NJF_J1tN1CgdU_qyYXYx"
