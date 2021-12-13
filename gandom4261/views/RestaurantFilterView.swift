@@ -61,7 +61,7 @@ struct RestaurantFilterView: View {
             }.padding(40)
             
             NavigationLink {
-               SuggestionView(content: category, isGetaway: false)
+               SuggestionView(content: category, isGetaway: false, filterRadius: selectedDistance, filterType: selectedType, filterPriceLevel: selectedPrice)
             } label: {
                ZStack {
                   RoundedRectangle(cornerRadius: 15)

@@ -35,22 +35,55 @@ struct SuggestionView: View {
    var long: String = "longtitude=-84.286650"
    @State private var desLat: Double = 0.0
    @State private var desLong: Double = 0.0
-
+   var filterRadius: String = ""
+   var filterType: String = ""
+   var filterPriceLevel: String = ""
    
    
    
    func performRequest() {
+      var find = content
+      var radius = 10000
+      var price = ""
+      if isGetaway != true && content == "Restaurant" {
+         switch filterRadius {
+            case "05 miles":
+               radius = 8047
+            case "10 miles":
+               radius = 16093
+            case "15 miles":
+               radius = 24140
+            case "30 miles":
+               radius = 48280
+            default:
+               radius = 60000
+         }
+         switch filterType {
+            case "Noodle Soup":
+               find = "Noodle&Restaurant"
+            case "Sushi Bar":
+               find = "Sushi&Restaurant"
+            case "BBQ":
+               find = "BBQ&Restaurant"
+            case "Fastfood":
+               find = "Fastfood&Restaurant"
+            default:
+               find = "Restaurant"
+         }
+         
+      }
+      if content == "Coffee Shop" {
+         find = "Coffee"
+      }
       let headers = [
          "Accept": "application/json",
          "Authorization": "Bearer fptQQH-6MKQSd9IuZy8hHZk88BBNgzqbHR-0reJlLnTN6iAQFRewG2br8UvJ6n3h_qmAwGmtXuQCdtrDaoqHoxv-XcFcSTA8B4ycedGr1lb_NJF_J1tN1CgdU_qyYXYx"
       ]
       
 
-      if content == "Coffee Shop" {
-         content = "Coffee"
-      }
-      let radius = 10000
-      let yelp_url = "https://api.yelp.com/v3/businesses/search?term=" + content + "&location=" + "Morrow&" + lat + "&" + long + "&radius=" + String(radius)
+      
+      
+      let yelp_url = "https://api.yelp.com/v3/businesses/search?term=" + find + "&location=Atlanta&"  + lat + "&" + long + "&radius=" + String(radius)
       let request = NSMutableURLRequest(url: NSURL(string: yelp_url)! as URL,
                                         cachePolicy: .useProtocolCachePolicy,
                                         timeoutInterval: 10.0)
